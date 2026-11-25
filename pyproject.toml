@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "client-onboarding-bot"
+version = "2.0.0"
+description = "Production-grade, idempotent multi-channel client onboarding automation engine with SQLite state tracking, Decimal invoicing, multi-format CRM ingestion, and resilient notifications."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["automation", "crm", "onboarding", "invoicing", "workflow", "sqlite", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Office/Business",
+]
+# Core engine requires zero third-party packages at runtime.
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6.0.2"]
+dotenv = ["python-dotenv>=1.0.1"]
+gdrive = [
+    "google-api-python-client>=2.150.0",
+    "google-auth>=2.35.0",
+]
+all = [
+    "PyYAML>=6.0.2",
+    "python-dotenv>=1.0.1",
+    "google-api-python-client>=2.150.0",
+    "google-auth>=2.35.0",
+]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.8.0",
+    "mypy>=1.13.0",
+    "types-PyYAML>=6.0.12",
+]
+
+[project.scripts]
+client-onboarding-bot = "client_onboarding_bot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+mypy_path = "src"
+strict = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true

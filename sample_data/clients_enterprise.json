@@ -1,0 +1,43 @@
+[
+  {
+    "Client ID": "CRM-1042",
+    "Client Name": "Meridian Cloud Systems",
+    "Contact Name": "Elena Vance",
+    "Email": "elena@meridiancloud.example.com",
+    "Project Name": "Multi-Region Pipeline Automation",
+    "Project Fee": "2400.00",
+    "Currency": "EUR",
+    "Discount": "10%",
+    "Tax Rate": "20%",
+    "Payment Terms Days": "30",
+    "Tier": "Enterprise",
+    "Status": "Won",
+    "Onboarded": "No",
+    "Notes": "Requires GDPR-compliant EU storage folder layout."
+  },
+  {
+    "Client ID": "CRM-1043",
+    "Client Name": "Crescent Retail Group",
+    "Contact Name": "Tariq Al-Mansoor",
+    "Email": "tariq@crescentretail.example.com",
+    "Project Name": "ERP & Invoice Reconciliation Bot",
+    "Project Fee": "SAR 7,500",
+    "Discount": "500",
+    "Tax Rate": "15%",
+    "Payment Terms Days": "14",
+    "Tier": "Growth",
+    "Status": "Won",
+    "Onboarded": "No",
+    "Notes": "Weekly KPI digest every Thursday."
+  },
+  {
+    "Client ID": "CRM-1044",
+    "Client Name": "Harborview Logistics",
+    "Contact Name": "David Chen",
+    "Email": "dchen@harborview.example.com",
+    "Project Name": "Shipment Alert Integration",
+    "Project Fee": "$1,100",
+    "Status": "Proposal Sent",
+    "Onboarded": "No"
+  }
+]

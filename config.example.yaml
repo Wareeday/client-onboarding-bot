@@ -1,0 +1,47 @@
+# Declarative configuration template for Client Onboarding Bot.
+# Copy to `config.yaml` (or pass via `--config path/to/config.yaml`).
+# Supports YAML (.yaml/.yml), JSON (.json), or TOML (.toml).
+
+agency:
+  agency_name: "Your Automation Studio"
+  sender_name: "Operations Lead"
+  sender_email: "onboarding@example.com"
+  agency_address: "100 Innovation Way, Suite 400"
+  tax_id: ""
+  website: "https://example.com"
+  payment_instructions: "ACH / Wire transfer — settlement instructions attached on invoice."
+  currency_symbol: "$"
+  currency_code: "USD"
+  tax_label: "Tax"
+  tax_rate: 0.00
+  invoice_due_days: 14
+  invoice_prefix: "INV"
+
+subfolders:
+  - "01_Contracts_and_Invoices"
+  - "02_Client_Assets"
+  - "03_Automation_Deliverables"
+  - "04_Weekly_Reports"
+
+milestones:
+  - name: "Kickoff Call & Access Setup"
+    day_offset: 1
+    status: "Not Started"
+    notes: "Confirm credentials, data samples, and primary contacts."
+  - name: "Architecture & Prototype Demo"
+    day_offset: 5
+    status: "Not Started"
+    notes: "Review workflow prototype and edge-case rules."
+  - name: "Testing on Sample Data"
+    day_offset: 9
+    status: "Not Started"
+    notes: "End-to-end QA validation against realistic payloads."
+  - name: "Final Handover & Documentation"
+    day_offset: 14
+    status: "Not Started"
+    notes: "Production deployment, runbook walkthrough, and sign-off."
+
+retry:
+  max_attempts: 3
+  base_delay_seconds: 1.0
+  backoff_multiplier: 2.0

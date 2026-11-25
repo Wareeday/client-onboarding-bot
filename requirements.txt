@@ -1,0 +1,11 @@
+# Core local onboarding, SQLite state store, Decimal invoicing, .env/JSON/TOML config,
+# SMTP email delivery, and Slack/Discord/generic webhooks run on pure Python 3.10+ stdlib.
+# Install optional integrations as needed:
+
+# Environment & declarative YAML config support:
+python-dotenv>=1.0.1
+PyYAML>=6.0.2
+
+# Google Drive API workspace provisioning (--mode gdrive):
+google-api-python-client>=2.150.0
+google-auth>=2.35.0
